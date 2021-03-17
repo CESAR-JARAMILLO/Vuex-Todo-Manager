@@ -12,14 +12,14 @@
       </div>
       <div class="todos">
           <div 
-            @dblclick="onDnlClick(todo)" 
+            @dblclick="onDblClick(todo)" 
             v-for="todo in allTodos" 
             :key="todo.id" 
             class="todo"
             :class="{'is-complete':todo.completed}"
           >
               {{ todo.title }}
-              <i @click="deleTodo(todo.id)" class="fa fa-trash-alt"></i>
+              <i @click="deleteTodo(todo.id)" class="fa fa-trash-alt"></i>
           </div>
       </div>
   </div>
